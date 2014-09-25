@@ -15,8 +15,10 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get '/dailies/augment_streak/:id' => 'dailies#augment_streak'
-
+  get '/goals/augment_streak/:id' => 'goals#augment_streak'
   resources :dailies
+  resources :goals
+  resources :wants
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

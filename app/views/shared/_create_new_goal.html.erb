@@ -1,0 +1,15 @@
+<div class="text-center">
+	<h3>Add a new goal</h3>
+	<%= simple_form_for @goal do |f| %>
+	<%= f.error_notification %>
+	<div class="form-input">
+		<%= f.input :name, :maxlength => 30 %>
+		<%= f.input :target_date, :maxlength => 50 %>
+		<%= f.hidden_field :user_id, :value => current_user.id, :maxlength => 30 %>
+		<br>
+		<div class="form-actions">
+			<%= f.button :submit, :class => "btn btn-primary" %>
+		</div>
+	</div>
+	<% end %>
+</div>

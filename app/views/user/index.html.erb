@@ -15,6 +15,7 @@
 	<% @goals.order('created_at ASC').each do |p| %>
 		<%= render "/shared/user_goals", :p => p %>
 	<% end %>		
+	<%= render "/shared/create_new_goal" %>
 </div>
 
 <div class="row col-md-4">

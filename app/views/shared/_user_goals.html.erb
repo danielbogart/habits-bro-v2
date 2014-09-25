@@ -1,2 +1,6 @@
 <p class="text-center"><%= p.name %></p>
 <p class="text-center">Achieve by: <%= p.target_date %></p>
+<div class="text-center">
+<%= link_to "DESTROY", "goals/"+p.id.to_s, :method => :DELETE, :class => "btn btn-sm btn-danger" %>	
+</div>
+<br>
