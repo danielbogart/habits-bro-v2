@@ -2,7 +2,7 @@
 	<h1>User Home Page</h1>
 </div>
 
-<div class="row col-md-4">
+<div class="col-md-4">
 	<h2 class="text-center">Dailies</h2>
 	<% @dailies.order('created_at ASC').each do |p| %>		
 		<%= render "/shared/user_dailies", :p => p %>
@@ -10,7 +10,7 @@
 	<%= render "/shared/create_new_daily" %>
 </div>
 
-<div class="row col-md-4">
+<div class="col-md-4">
 	<h2 class="text-center">Goals</h2>
 	<% @goals.order('created_at ASC').each do |p| %>
 		<%= render "/shared/user_goals", :p => p %>
@@ -18,7 +18,7 @@
 	<%= render "/shared/create_new_goal" %>
 </div>
 
-<div class="row col-md-4">
+<div class="col-md-4">
 	<h2 class="text-center">Wants</h2>
 	<% @wants.order('created_at ASC').each do |p| %>
 		<%= render "/shared/user_wants", :p => p %>

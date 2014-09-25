@@ -1,10 +1,10 @@
 class UserController < ApplicationController
   def index
-  	@dailies = Daily.where(:user_id => current_user.id)
+  	@dailies = current_user.dailies
   	@daily = Daily.new
-  	@goals = Goal.where(:user_id => current_user.id)
+  	@goals = current_user.goals
   	@goal = Goal.new
+  	@wants = current_user.wants
   	@want = Want.new
-  	@wants = Want.where(:user_id => current_user.id)
   end
 end
