@@ -18,4 +18,9 @@ class DailiesController < ApplicationController
   	@daily.update_attributes(:streak => @daily.streak+1)
   	redirect_to root_path, :notice => "NIIIIIIZE"
   end
+
+  def destroy
+  	Daily.find(params[:id]).destroy
+  	redirect_to root_path, :notice => "Your daily has been DESTROYED"
+  end
 end
