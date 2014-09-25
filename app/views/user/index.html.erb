@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row text-center">
+		<h1>User Home Page</h1>
+	</div>
+	<div class="row col-md-4">
+		<h2 class="text-center">Dailies</h2>
+		<% @dailies.each do |p| %>
+			<p><%= p.name %></p>
+		<% end %>
+	</div>
+	<div class="row col-md-4">
+		<h2 class="text-center">Goals</h2>
+	</div>
+	<div class="row col-md-4">
+		<h2 class="text-center">Wants</h2>
+	</div>
+</div>
+

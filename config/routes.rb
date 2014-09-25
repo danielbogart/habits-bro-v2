@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
+
+  get 'user/index'
+
   devise_for :users
   get 'home/index'
 
+ authenticated :user do
+     root :to => "user#index", :as => "authenticated_root"
+  end
 
   # Site routed with "root"
   root 'home#index'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
