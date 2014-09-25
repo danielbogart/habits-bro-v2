@@ -1,18 +1,24 @@
-<div class="container">
-	<div class="row text-center">
-		<h1>User Home Page</h1>
-	</div>
-	<div class="row col-md-4">
-		<h2 class="text-center">Dailies</h2>
-		<% @dailies.each do |p| %>
-			<p><%= p.name %></p>
-		<% end %>
-	</div>
-	<div class="row col-md-4">
-		<h2 class="text-center">Goals</h2>
-	</div>
-	<div class="row col-md-4">
-		<h2 class="text-center">Wants</h2>
-	</div>
+<div class="row text-center">
+	<h1>User Home Page</h1>
 </div>
+<div class="row col-md-4">
+	<h2 class="text-center">Dailies</h2>
+	<% @dailies.order('created_at ASC').each do |p| %>
+		<p><%= p.name %>
+		<%= link_to "Did it", "daily/augment_streak/"+p.id.to_s, :class => "btn btn-md btn-primary pull-right" %>
+		</p>			
+		<p>Streak:
+		<% p.streak.times do %>
+			x
+		<% end %>
+		</p>
+	<% end %>
+</div>
+<div class="row col-md-4">
+	<h2 class="text-center">Goals</h2>
+</div>
+<div class="row col-md-4">
+	<h2 class="text-center">Wants</h2>
+</div>
+
 

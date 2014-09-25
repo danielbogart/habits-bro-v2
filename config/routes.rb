@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'daily/augment_streak'
+
   get 'user/index'
 
   devise_for :users
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
   # Site routed with "root"
   root 'home#index'
 
-
+  get '/daily/augment_streak/:id' => 'daily#augment_streak'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

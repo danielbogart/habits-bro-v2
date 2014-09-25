@@ -1,5 +1,5 @@
 class UserController < ApplicationController
   def index
-  	@dailies = Daily.all
+  	@dailies = Daily.where(:user_id => current_user.id)
   end
 end
