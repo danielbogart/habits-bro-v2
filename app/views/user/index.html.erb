@@ -20,6 +20,10 @@
 
 <div class="row col-md-4">
 	<h2 class="text-center">Wants</h2>
+	<% @wants.order('created_at ASC').each do |p| %>
+		<%= render "/shared/user_wants", :p => p %>
+	<% end %>		
+	<%= render "/shared/create_new_want" %>
 </div>
 
 
