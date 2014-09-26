@@ -82,3 +82,7 @@
 .target-date {
 	margin: 10px 0 0 0;
 }
+
+.custom-height-button {
+	height: 68px;
+}
