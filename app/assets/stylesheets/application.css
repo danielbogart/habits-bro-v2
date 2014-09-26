@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+.borderz {
+	border: 1px solid #428bca;
+	border-radius: 7px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.plus-button {
+	font-size: 30px;
+}
+
+.plus-button:hover {
+	text-decoration: none;
+}
+
+.streak {
+	color: #ff6707;
+}
+
+.minus-button {
+	display: none;
+	padding-bottom: 10px;	
+	padding-right: 15px;
+	font-size: 30px;
+	color: red;
+}
+
+.minus-button:hover {
+	text-decoration: none;
+	color: red;	
+}
+
+.habit-title:hover .minus-button{
+	display: block;
+}
