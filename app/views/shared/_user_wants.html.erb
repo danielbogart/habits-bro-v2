@@ -1,6 +1,8 @@
-<p><%= p.name %></p>		
-<p>Purchase when: 
-<%= p.purchase_condition %>
-<%= link_to "DESTROY", "wants/"+p.id.to_s, :method => :DELETE, :class => "btn btn-sm btn-danger pull-right" %>	
-</p>
-<br>
+<div class="borderz want-title">
+	<p><%= p.name %>
+	<%= link_to "-", "wants/"+p.id.to_s, :method => :DELETE, :class => "minus-button pull-left" %>
+	</p>		
+	<p>Purchase when: 
+	<%= p.purchase_condition %>
+	</p>
+</div>

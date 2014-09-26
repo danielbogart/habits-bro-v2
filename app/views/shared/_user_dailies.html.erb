@@ -1,7 +1,6 @@
-<div class="borderz">
-	<p><span class="habit-title"><%= p.name %>
+<div class="borderz habit-title">
+	<p><%= p.name %>
 	<%= link_to "-", "dailies/"+p.id.to_s, :method => :DELETE, :class => "minus-button pull-left" %>
-	</span>
 	<%= link_to "+", "dailies/augment_streak/"+p.id.to_s, :class => "plus-button pull-right" %>
 	</p>	
 	<!--<%= link_to "delete", "dailies/"+p.id.to_s, :method => :DELETE, :class => "btn btn-sm btn-danger pull-right" %>-->

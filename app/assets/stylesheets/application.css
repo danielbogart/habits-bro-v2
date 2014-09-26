@@ -64,7 +64,11 @@
 	display: block;
 }
 
-.goal-title:hover .minus-button-2{
+.want-title:hover .minus-button{
+	display: block;
+}
+
+.goal-div:hover .minus-button-2{
 	display: block;
 }
 
