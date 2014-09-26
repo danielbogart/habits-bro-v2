@@ -6,9 +6,15 @@
 		<span class="input-group-btn">
 			<%= f.button :submit, :class => "btn btn-md btn-primary", :value => "+" %>
 		</span>
-	</div>		
-		<%= f.input :target_date, :maxlength => 50, :label => false %>
+	</div>
+	<div class="custom-top-margin">
+		<span> By
+			<span class="inline-block-date">
+				<%= f.input :target_date, :maxlength => 50, :label => false %>
+			</span>
+		</span>
 		<%= f.hidden_field :user_id, :value => current_user.id, :maxlength => 30 %>
-		<br>
+	</div>
+	<br>
 </div>
 	<% end %>

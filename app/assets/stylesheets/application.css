@@ -86,3 +86,11 @@
 .custom-height-button {
 	height: 68px;
 }
+
+.inline-block-date {
+	display: inline-block;
+}
+
+.custom-top-margin {
+	margin-top: 5px;
+}
