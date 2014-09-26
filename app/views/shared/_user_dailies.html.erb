@@ -5,10 +5,10 @@
 	</p>	
 	<!--<%= link_to "delete", "dailies/"+p.id.to_s, :method => :DELETE, :class => "btn btn-sm btn-danger pull-right" %>-->
 	<% if p.streak == 0 %>
-		<span class="streak">o</span>
+		<span class="streak">Ø</span>
 	<% else %>			
 		<% p.streak.times do %>
-				<span class="streak">x</span>
+				<span class="streak"><img src=<%= asset_path "bicep.png"%> height="20px" width="20px" alt="fireball"/></span>
 		<% end %>		
 	<% end %>	
 </div>
