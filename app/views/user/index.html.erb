@@ -3,11 +3,15 @@
 </div>
 
 <div class="col-md-4">
-	<h2 class="text-center">Dailies</h2>
-	<% @dailies.order('created_at ASC').each do |p| %>		
-		<%= render "/shared/user_dailies", :p => p %>
-	<% end %>
-	<%= render "/shared/create_new_daily" %>
+	<div class="panel panel-primary">
+		<div class="text-center panel-heading"><h4>Dailies</h4></div>
+		<div class="panel-body">
+			<%= render "/shared/create_new_daily" %>
+			<% @dailies.order('created_at ASC').each do |p| %>		
+				<%= render "/shared/user_dailies", :p => p %>
+			<% end %>
+		</div>
+	</div>
 </div>
 
 <div class="col-md-4">

@@ -1,12 +1,13 @@
-<h3>Add a new daily</h3>
 <%= simple_form_for @daily do |f| %>
 <%= f.error_notification %>
-<div class="form-input">
-	<%= f.input :name, :maxlength => 50 %>
+
+<div class="input-group input-append">
+	<%= f.input :name, :maxlength => 50, :input_html => { :class => "form-control" }, :label => false, :placeholder => "Enter new daily habit" %>
 	<%= f.hidden_field :user_id, :value => current_user.id, :maxlength => 50 %>
-	<br>
-	<div class="form-actions">
-		<%= f.button :submit, :class => "btn btn-primary" %>
-	</div>
+	<span class="input-group-btn">
+		<%= f.button :submit, :class => "btn btn-md btn-primary", :value => "+" %>
+	</span>
 </div>
+<br>
+
 <% end %>
