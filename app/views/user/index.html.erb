@@ -1,7 +1,3 @@
-<div class="row text-center">
-	<h1>User Home Page</h1>
-</div>
-
 <div class="col-md-4">
 	<div class="panel panel-primary">
 		<div class="text-center panel-heading"><h4>Dailies</h4></div>
@@ -15,19 +11,25 @@
 </div>
 
 <div class="col-md-4">
-	<h2 class="text-center">Goals</h2>
-	<% @goals.order('created_at ASC').each do |p| %>
-		<%= render "/shared/user_goals", :p => p %>
-	<% end %>		
-	<%= render "/shared/create_new_goal" %>
+	<div class="panel panel-primary">
+		<div class="text-center panel-heading"><h4>Goals</h4></div>
+		<div class="panel-body">
+			<%= render "/shared/create_new_goal" %>	
+			<% @goals.order('created_at ASC').each do |p| %>
+				<%= render "/shared/user_goals", :p => p %>
+			<% end %>		
+		</div>
+	</div>
 </div>
 
 <div class="col-md-4">
-	<h2 class="text-center">Wants</h2>
-	<% @wants.order('created_at ASC').each do |p| %>
-		<%= render "/shared/user_wants", :p => p %>
-	<% end %>		
-	<%= render "/shared/create_new_want" %>
+	<div class="panel panel-primary">
+		<div class="text-center panel-heading"><h4>Wants</h4></div>
+		<div class="panel-body">
+			<%= render "/shared/create_new_want" %>		
+			<% @wants.order('created_at ASC').each do |p| %>
+				<%= render "/shared/user_wants", :p => p %>
+			<% end %>		
+		</div>
+	</div>
 </div>
-
-
