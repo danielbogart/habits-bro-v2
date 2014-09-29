@@ -8,8 +8,9 @@ class UserController < ApplicationController
   	@want = Want.new
 
   	current_user.dailies.each do |d|
-  		if d.updated_at < 24.hours.ago
+  		if d.updated_at < 1.minute.ago
   			d.update_attributes(:streak => 0)
+        flash[:error] = "Streak ended"
   		end
   	end
   end
