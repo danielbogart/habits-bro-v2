@@ -48,3 +48,12 @@ gem "twitter-bootstrap-rails"
 
 # Simple Form for easy form creation
 gem 'simple_form', '~> 3.0.0.rc'
+
+# RSpec for testing
+group :development, :test do
+	gem 'rspec-rails'
+	gem 'factory_girl_rails'	
+  	gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+  	gem 'launchy'
+    gem 'database_cleaner'  	
+end
